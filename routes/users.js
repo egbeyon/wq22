@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const router = new express.Router();
 
 // Create a user
-router.post('/user', async (req, res) => {
+router.post('/users', async (req, res) => {
   try {
     //const {role} = req.body;
     //if (role) throw new Error('you cannot set role property.');
@@ -20,7 +20,7 @@ router.post('/user', async (req, res) => {
 
 
 // Login User
-router.post('/user/login', async (req, res) => {
+router.post('/users/login', async (req, res) => {
   try {
     const user = await User.findByCredentials(req.body.username, req.body.password);
     const token = await user.generateAuthToken();
@@ -34,7 +34,7 @@ router.post('/user/login', async (req, res) => {
 
 
 // Logout user
-router.post('/user/logout', auth.simple, async (req, res) => {
+router.post('/users/logout', auth.simple, async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.token;
