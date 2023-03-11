@@ -1,0 +1,8 @@
+export const TOGGLE_ENTRY_DIALOG = "TOGGLE_ENTRY_DIALOG"
+export const GET_ENTRY = "GET_ENTRY";
+export const GET_ENTRYS = "GET_ENTRYS";
+export const ADD_ENTRY = "ADD_ENTRY";
+export const DELETE_ENTRY = "DELETE_ENTRY"
+export const UPDATE_ENTRY = "UPDATE_ENTRY"
+export const SELECT_ALL_ENTRY = "SELECT_ALL_ENTRY"
+export const SELECT_ENTRY = "SELECT_ENTRY"
